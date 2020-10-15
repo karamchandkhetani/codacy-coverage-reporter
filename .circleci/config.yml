@@ -235,7 +235,7 @@ workflows:
             else
               sbt clean coverage test coverageReport
               sbt coverageAggregate
-              bash <(curl -Ls https://coverage.codacy.com/get.sh) report --skip
+              ./get.sh report --skip
               sbt "it:test"
             fi
           requires:
